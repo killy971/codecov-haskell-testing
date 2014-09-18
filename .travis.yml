@@ -18,3 +18,4 @@ script:
 after_script:
   #- codecov-haskell test-one test-two --exclude-dir=test1 --exclude-dir=test2 --dont-send --display-report
   - ./send-fake-coverage.sh
+  - sleep 10
