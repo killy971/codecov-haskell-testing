@@ -16,4 +16,6 @@ script:
   - run-cabal-test --cabal-name=cabal --show-details=always
 
 after_script:
-  - codecov-haskell test-one test-two --exclude-dir=test1 --exclude-dir=test2 --dont-send --display-report --print-response
+  - codecov-haskell test-one --exclude-dir=test1 --dont-send --display-report
+  - codecov-haskell test-two --exclude-dir=test2 --dont-send --display-report
+  - codecov-haskell test-one test-two --exclude-dir=test1 --exclude-dir=test2 --display-report --print-response
