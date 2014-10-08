@@ -1,7 +1,6 @@
-language: haskell
-ghc:
-  - 7.8
 before_install:
   - echo "Dummy before_install"
+install:
+  - echo "Dummy install"
 script:
   - echo "Dummy script"
