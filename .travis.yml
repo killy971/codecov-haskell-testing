@@ -20,3 +20,4 @@ after_script:
   - codecov-haskell test-one --exclude-dir=test1 --dont-send --display-report
   - codecov-haskell test-two --exclude-dir=test2 --dont-send --display-report
   - codecov-haskell test-three --exclude-dir=test3 --dont-send --display-report
+  - codecov-haskell test-one test-two test-three --exclude-dir=test1 --exclude-dir=test2 --exclude-dir=test3 --dont-send --display-report
