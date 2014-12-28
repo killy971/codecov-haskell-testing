@@ -7,12 +7,12 @@ import Util
 import System.Exit ( exitFailure, exitSuccess )
 import Test.HUnit
 
-testTakeUntil = "takeUntil" ~: [takeUntil (> 1) [] ~=? []]
+testTakeUntil = "takeUntil" ~: [takeUntil (> 1) [1, 2] ~=? [1, 2]]
 
-testOne = [testTakeUntil]
+testThree = [testTakeUntil]
 
 main = do
-    cnt <- runTestTT (test testOne)
+    cnt <- runTestTT (test testThree)
     if errors cnt + failures cnt == 0
         then exitSuccess
         else exitFailure

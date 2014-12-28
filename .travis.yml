@@ -5,8 +5,9 @@ ghc:
   - 7.8
 
 before_install:
-  - git clone -b develop https://github.com/guillaume-nargeot/codecov-haskell
+  - git clone https://github.com/guillaume-nargeot/codecov-haskell
   - cd codecov-haskell
+  - git checkout 34661200380500a2c0175f208739efac870af791
   - cabal install
   - cd ..
 
@@ -18,4 +19,4 @@ script:
 after_script:
   - codecov-haskell test-one --exclude-dir=test1 --dont-send --display-report
   - codecov-haskell test-two --exclude-dir=test2 --dont-send --display-report
-  - codecov-haskell test-one test-two --exclude-dir=test1 --exclude-dir=test2 --display-report --print-response
+  - codecov-haskell test three --exclude-dir=test3 --dont-send --display-report
